@@ -3,7 +3,7 @@
     <section class="intro">
       <h1>Get the latest tech news!</h1>
     </section>
-    <PostsList/>
+    <PostsList : posts="loadedPosts" />
   </div>
 </template>
 
@@ -11,7 +11,18 @@
 import PostsList from '../components/Postss/PostsList.vue'
 export default {
   components: { PostsList },
-
+  props:{posts},
+  computed: {
+    loadedPosts() {
+      return this.$store.getters.loadedPosts
+    }
+  }
+  //data() {
+    //return {
+      //loadedPosts: []
+    //};
+  //},
+  //created(){}
 }
 </script>
 

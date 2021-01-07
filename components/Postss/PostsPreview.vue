@@ -2,7 +2,7 @@
   <nuxt-link :to="postLink" class="post-preview">
       <article>
         <div class="post-thumbnail"
-        :style="{backgroundImage:'('+thumbnail+')'}"></div>
+        :style="{backgroundImage:'url('+thumbnail+')'}"></div>
         <div class="post-content">
           <h1>{{title}}</h1>
           <p>{{previewText}}</p>
@@ -38,7 +38,7 @@ export default {
   },
   computed: {
     postLink() {
-      return this.isAdmin ? '/admin/'+this.id : '/postss/'+this.id
+      return this.isAdmin ? '/admin/' +this.id : '/postss/' +this.id
     }
   }
 }

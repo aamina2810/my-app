@@ -31,8 +31,8 @@ export default({
   },
   data() {
     return {
-      editedPost: this.post
-      ?{...this.post}
+      editedPost: this.posts
+      ?{...this.posts}
       :{
         title:"",
         author:"",
